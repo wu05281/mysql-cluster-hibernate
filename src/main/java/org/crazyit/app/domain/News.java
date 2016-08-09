@@ -42,7 +42,7 @@ public class News implements Serializable{
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	@Column(name = "contern")
+	@Column(name = "content")
 	public String getContent() {
 		return content;
 	}
