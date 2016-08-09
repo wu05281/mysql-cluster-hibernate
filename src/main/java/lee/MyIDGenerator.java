@@ -3,7 +3,7 @@ package lee;
 import java.io.Serializable;
 
 import org.hibernate.HibernateException;
-import org.hibernate.engine.SessionImplementor;
+import org.hibernate.engine.spi.SessionImplementor;
 import org.hibernate.id.IdentifierGenerator;
 /**
  * 
@@ -16,9 +16,8 @@ import org.hibernate.id.IdentifierGenerator;
  * @author wubo
  *
  */
-public class IDGenerator implements IdentifierGenerator{
+public class MyIDGenerator implements IdentifierGenerator{
 
-	@Override
 	public Serializable generate(SessionImplementor arg0, Object arg1) throws HibernateException {
 		KeySingleton key = KeySingleton.getInstance();
 		return key.sequence(arg0, arg1);

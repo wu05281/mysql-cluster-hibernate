@@ -8,13 +8,12 @@
 		<!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:8066/TESTDB</property> -->
 		<!-- <property name="hibernate.connection.username">test</property> -->
 		<!-- <property name="hibernate.connection.password">test</property> -->
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3307/db1</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/db1</property>
 		<property name="hibernate.connection.username">wubo</property>
 		<property name="hibernate.connection.password">123456</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
 		<property name="hibernate.format_sql">true</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
-		<property name="packagesToScan">org.crazyit.app.domain</property>
-<!-- 		<mapping resource="org/crazyit/app/domain/News.hbm.xml" /> -->
+		<mapping class="org.crazyit.app.domain.News" />
 	</session-factory>
 </hibernate-configuration>
