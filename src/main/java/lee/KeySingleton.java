@@ -63,7 +63,7 @@ public class KeySingleton {
 		if (seqCache == null){
 			Session session = arg0.getFactory().openSession();
 			Transaction tx = session.beginTransaction();
-			SQLQuery query = session.createSQLQuery("SELECT mycat_seq_nextval('"+tableName +"')");
+			SQLQuery query = session.createSQLQuery("SELECT db1.mycat_seq_nextval('"+tableName +"')");
 			String seq = (String) query.uniqueResult();
 			String[] seqs = seq.split(",");
 			//获取缓存长度
