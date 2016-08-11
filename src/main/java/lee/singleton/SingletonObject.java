@@ -48,7 +48,7 @@ public class SingletonObject {
 			//获取此序列初始值
 			sequence = 9;
 		} 
-		SimpleDateFormat formatter = new SimpleDateFormat ("yyyyMMddHHmmss");
+		SimpleDateFormat formatter = new SimpleDateFormat ("yyMMddHHmmss");
 		String id = formatter.format(new Date()) + "" + sequence;
 		System.out.println(id);
 		seqCache--;
